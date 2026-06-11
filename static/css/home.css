@@ -1,0 +1,284 @@
+main {
+    flex: 1;
+
+    max-width: 1200px;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* =========================
+   ОБЩИЕ СЕКЦИИ
+   ========================= */
+
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+/* =========================
+   КАРТОЧКИ
+   ========================= */
+
+.menu-card,
+.event-card,
+.vacancy-card,
+.promotion-card {
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+
+    padding: 20px;
+
+    background-color: white;
+}
+
+
+/* =========================
+   СПИСКИ КАРТОЧЕК
+   ========================= */
+
+.menu-items,
+.event-list,
+.vacancy-list,
+.promotion-list {
+    display: grid;
+    gap: 20px;
+}
+
+.event-list {
+    grid-template-columns:
+        repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.vacancy-list,
+.promotion-list,
+.menu-items {
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* =========================
+   ФОРМА РЕГИСТРАЦИИ
+   ========================= */
+
+.register-form {
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.register-form input {
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-form button {
+    padding: 12px;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+.hall-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* Кнопки залов */
+
+.hall-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-bottom: 40px;
+}
+
+.tab {
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #d8d8d8;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.tab.active {
+    background-color: #3a2a1e;
+    color: white;
+}
+
+
+/* Схема зала */
+
+.hall-layout {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 40px;
+}
+
+.hall-map {
+    width: 100%;
+    max-width: 1600px;
+
+    padding: 20px;
+
+    border: 2px solid #d8d8d8;
+    border-radius: 15px;
+
+    background-color: #faf8f5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 80px;
+}
+.tables-left,
+.tables-right {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+
+/* Столы */
+
+.table {
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    background-color: #8b5e3c;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* Бар */
+
+.bar-zone {
+    width: 280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.bar-counter {
+    width: 280px;
+    height: 70px;
+
+    background-color: #3a2a1e;
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Стулья */
+
+.bar-chairs {
+
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.chair {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background-color: #666;
+}
+
+
+/* Кнопка бронирования */
+
+.booking-container {
+    display: flex;
+    justify-content: center;
+}
+
+.booking-button {
+    padding: 15px 35px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #3a2a1e;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.booking-button:hover {
+    transform: translateY(-2px);
+}
+
+.hall-2 {
+    display: none;
+}
+
+.hall2-tables {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 60px;
+
+    justify-items: center;
+}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Мероприятия
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <h2>Мероприятия</h2>
+</section>
+
+<div class="event-list">
+
+    <article class="event-card">
+
+        <div class="image-block">
+            <img src="{% static 'images/music.jpg' %}" alt="Живая музыка">
+        </div>
+
+        <div class="text-block">
+            <h3>Вечер живой музыки</h3>
+
+            <p>Каждую пятницу с 19:00.</p>
+        </div>
+
+    </article>
+
+    <article class="event-card">
+
+        <div class="image-block">
+            <img src="{% static 'images/master-class.jpg' %}" alt="Мастер-класс">
+        </div>
+
+        <div class="text-block">
+            <h3>Кулинарный мастер-класс</h3>
+
+            <p>12 июля в 18:00.</p>
+        </div>
+
+    </article>
+
+</div>
+
+{% endblock %}

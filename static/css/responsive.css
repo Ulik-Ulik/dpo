@@ -1,0 +1,57 @@
+@media (max-width: 768px)
+{
+.hall-map {
+flex-direction: column;
+}
+.tables-left,
+.tables-right {
+grid-template-columns: repeat(2, 1fr);
+}
+.bar-counter {
+width: 220px;
+height: 70px;
+ background-color: #3a2a1e;
+  color: white;
+   border-radius: 12px;
+   display: flex;
+    justify-content: center;
+     align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+       }
+       .bar-chairs {
+       grid-column: auto;
+       }
+       .table {
+        width: 90px;
+         height: 90px;
+          font-size: 16px;
+          }
+          header {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+          }
+          nav {
+           justify-content: center;
+           }
+           footer {
+           flex-direction: column;
+            }
+            .event-list {
+             grid-template-columns: 1fr;
+             }
+             .info-block {
+             flex-direction: column;
+             }
+             .image-block img {
+             height: 220px;
+              }
+              .menu-item {
+              flex-direction: column;
+              align-items: flex-start;
+              }
+              .menu-item span {
+              font-size: 20px;
+              }
+}

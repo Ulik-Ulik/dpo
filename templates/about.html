@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+О нас
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <h2>О ресторане</h2>
+</section>
+
+<section class="info-block">
+
+    <div class="text-block">
+        <h3>Добро пожаловать</h3>
+
+        <p>
+            Ресторан «Старый двор» работает с 2015 года и предлагает
+            блюда русской и европейской кухни.
+        </p>
+
+        <p>
+            Уютная атмосфера, живая музыка и просторные залы делают
+            ресторан отличным местом для отдыха.
+        </p>
+    </div>
+
+    <div class="image-block">
+        <img src="{% static 'images/restaurant.jpg' %}" alt="Ресторан">
+    </div>
+
+</section>
+
+<section class="info-block">
+
+    <div class="image-block">
+        <img src="{% static 'images/kitchen.jpg' %}" alt="Кухня">
+    </div>
+
+    <div class="text-block">
+        <h3>Наша кухня</h3>
+
+        <p>
+            Мы используем свежие продукты и готовим блюда по
+            традиционным рецептам.
+        </p>
+    </div>
+
+</section>
+
+{% endblock %}

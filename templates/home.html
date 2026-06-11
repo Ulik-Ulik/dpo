@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block content %}
+
+<section class="hall-section">
+
+    <h2>Схема залов</h2>
+
+    <div class="hall-tabs">
+
+        <button class="tab active">
+            Основной зал
+        </button>
+
+        <button class="tab">
+            Зал №2
+        </button>
+
+    </div>
+
+
+    <div class="hall-layout">
+
+    <div class="hall-map hall-1">
+
+        <div class="tables-left">
+            <div class="table">1</div>
+            <div class="table">2</div>
+            <div class="table">3</div>
+            <div class="table">4</div>
+        </div>
+
+        <div class="bar-zone">
+
+            <div class="bar-counter">
+                Бар
+            </div>
+
+            <div class="bar-chairs">
+                <div class="chair"></div>
+                <div class="chair"></div>
+                <div class="chair"></div>
+                <div class="chair"></div>
+            </div>
+
+        </div>
+
+        <div class="tables-right">
+            <div class="table">5</div>
+            <div class="table">6</div>
+            <div class="table">7</div>
+            <div class="table">8</div>
+        </div>
+
+    </div>
+
+
+    <div class="hall-map hall-2">
+
+        <div class="hall2-tables">
+
+            <div class="table">9</div>
+            <div class="table">10</div>
+            <div class="table">11</div>
+            <div class="table">12</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+    <div class="booking-container">
+
+        <button class="booking-button">
+            Забронировать столик
+        </button>
+
+    </div>
+
+</section>
+<script>
+
+const tabs = document.querySelectorAll('.tab');
+
+const hall1 = document.querySelector('.hall-1');
+const hall2 = document.querySelector('.hall-2');
+
+tabs[0].addEventListener('click', () => {
+
+    tabs[0].classList.add('active');
+    tabs[1].classList.remove('active');
+
+    hall1.style.display = 'flex';
+    hall2.style.display = 'none';
+
+});
+
+tabs[1].addEventListener('click', () => {
+
+    tabs[1].classList.add('active');
+    tabs[0].classList.remove('active');
+
+    hall1.style.display = 'none';
+    hall2.style.display = 'flex';
+
+});
+
+</script>
+{% endblock %}

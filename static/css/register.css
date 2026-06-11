@@ -1,0 +1,95 @@
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.register-card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.register-subtitle {
+    text-align: center;
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.register-form label {
+    font-weight: 600;
+}
+
+.register-form input {
+    padding: 12px;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.register-form input:focus {
+    outline: none;
+
+    border-color: #8b5e3c;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 10px;
+
+    align-items: flex-start;
+
+    margin-top: 10px;
+}
+
+.checkbox-group input {
+    margin-top: 4px;
+}
+
+.register-form button {
+    margin-top: 15px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #3a2a1e;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.register-form button:hover {
+    background-color: #4d3829;
+}

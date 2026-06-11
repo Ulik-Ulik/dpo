@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/events.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        Ресторан «Старый двор»
+    </div>
+
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/about/">О нас</a>
+        <a href="/menu/">Меню</a>
+        <a href="/events/">Мероприятия</a>
+        <a href="/vacancies/">Вакансии</a>
+        <a href="/promotions/">Акции</a>
+        <a href="/register/">Регистрация</a>
+    </nav>
+
+</header>
+
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer>
+
+    <div class="footer-info">
+        <h3>Ресторан «Старый двор»</h3>
+
+        <p>
+            ИП Иванов Иван Иванович
+        </p>
+
+        <p>
+            ИНН 123456789012
+        </p>
+    </div>
+
+    <div class="footer-contacts">
+        <p>Телефон: +7 (999) 123-45-67</p>
+        <p>Email: info@starydvor.ru</p>
+        <p>г. Екатеринбург, ул. Центральная, 15</p>
+    </div>
+
+</footer>
+</body>
+</html>

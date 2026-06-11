@@ -1,0 +1,11 @@
+.event-card {
+    overflow: hidden;
+}
+
+.event-card .image-block img {
+    height: 250px;
+}
+
+.event-card .text-block {
+    margin-top: 15px;
+}
