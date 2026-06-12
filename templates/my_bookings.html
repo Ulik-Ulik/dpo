@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Мои бронирования
+{% endblock %}
+
+{% block content %}
+
+<section class="bookings-section">
+
+    <h2>Мои бронирования</h2>
+
+    {% if bookings %}
+
+        <div class="booking-list">
+
+            {% for booking in bookings %}
+
+        <div class="booking-card">
+
+            <h3>{{ booking.name }}</h3>
+
+            <p>
+                Зал:
+                {{ booking.get_hall_display }}
+            </p>
+
+            <p>
+                Стол:
+                {{ booking.table_number }}
+            </p>
+
+            <p>
+                Дата:
+                {{ booking.booking_date }}
+            </p>
+
+            <p>
+                Время:
+                {{ booking.booking_time }}
+            </p>
+
+            <a href="{% url 'delete_booking' booking.id %}">
+                Отменить бронирование
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+
+    {% else %}
+
+        <p>
+            У вас пока нет бронирований.
+        </p>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

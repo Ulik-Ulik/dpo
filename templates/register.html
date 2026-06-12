@@ -11,43 +11,52 @@
     <div class="register-card">
 
         <h2>Регистрация</h2>
-
         <p class="register-subtitle">
             Создайте аккаунт для бронирования столиков и участия в мероприятиях.
         </p>
 
-        <form class="register-form">
+<form method="post" class="register-form">
 
-            <label for="name">Имя</label>
-            <input type="text" id="name" placeholder="Введите имя">
+    {% csrf_token %}
+    {% if form.errors %}
+        <div class="form-errors">
+            {{ form.errors }}
+        </div>
+    {% endif %}
 
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="example@mail.ru">
+    <div class="form-group">
+        <label for="{{ form.username.id_for_label }}">
+            Логин
+        </label>
+        {{ form.username }}
+    </div>
 
-            <label for="phone">Телефон</label>
-            <input type="tel" id="phone" placeholder="+7 (999) 123-45-67">
+    <div class="form-group">
+        <label for="{{ form.email.id_for_label }}">
+            Email
+        </label>
+        {{ form.email }}
+    </div>
 
-            <label for="password">Пароль</label>
-            <input type="password" id="password">
+    <div class="form-group">
+        <label for="{{ form.password.id_for_label }}">
+            Пароль
+        </label>
+        {{ form.password }}
+    </div>
 
-            <label for="password2">Повторите пароль</label>
-            <input type="password" id="password2">
+    <div class="form-group">
+        <label for="{{ form.password2.id_for_label }}">
+            Повторите пароль
+        </label>
+        {{ form.password2 }}
+    </div>
 
-            <div class="checkbox-group">
+    <button type="submit">
+        Зарегистрироваться
+    </button>
 
-                <input type="checkbox" id="agree">
-
-                <label for="agree">
-                    Я согласен на обработку персональных данных
-                </label>
-
-            </div>
-
-            <button type="submit">
-                Зарегистрироваться
-            </button>
-
-        </form>
+</form>
 
     </div>
 

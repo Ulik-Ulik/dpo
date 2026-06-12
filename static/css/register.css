@@ -93,3 +93,93 @@
 .register-form button:hover {
     background-color: #4d3829;
 }
+.register-section {
+    display: flex;
+    justify-content: center;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 600px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.register-card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.register-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+
+    color: #666;
+}
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-group label {
+    font-weight: 600;
+}
+.register-form input {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+.register-form button {
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #3a2a1e;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+.form-errors {
+    padding: 15px;
+
+    background-color: #ffe3e3;
+
+    border: 1px solid #ffb5b5;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #3a2a1e;
+}
+
+.form-group input {
+    width: 100%;
+}

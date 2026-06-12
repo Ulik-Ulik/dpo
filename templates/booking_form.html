@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Бронирование
+{% endblock %}
+
+{% block content %}
+
+<section class="register-section">
+
+    <div class="register-card">
+
+        <h2>Бронирование столика</h2>
+
+        <form method="post" class="register-form">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">
+                Забронировать
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

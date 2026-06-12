@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Вход
+{% endblock %}
+
+{% block content %}
+
+<section class="register-section">
+
+    <div class="register-card">
+
+        <h2>Вход</h2>
+
+        <p class="register-subtitle">
+            Войдите в аккаунт для управления бронированиями.
+        </p>
+
+        <form method="post" class="register-form">
+
+            {% csrf_token %}
+
+            <div class="form-group">
+
+                <label for="{{ form.username.id_for_label }}">
+                    Логин
+                </label>
+
+                {{ form.username }}
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="{{ form.password.id_for_label }}">
+                    Пароль
+                </label>
+
+                {{ form.password }}
+
+            </div>
+
+            <button type="submit">
+                Войти
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}
