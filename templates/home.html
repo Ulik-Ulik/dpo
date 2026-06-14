@@ -84,7 +84,84 @@
         </a>
 
     </div>
+    <div class="booking-container">
 
+<section class="reviews-section">
+    <div class="reviews-wrapper">
+    <h2>Отзывы гостей</h2>
+
+    <div class="reviews-list">
+
+        {% for review in reviews %}
+
+            <div class="review-card">
+
+                <h3>{{ review.name }}</h3>
+
+                <div class="review-rating">
+
+                    {% if review.rating == 5 %}
+                        ⭐⭐⭐⭐⭐
+                    {% elif review.rating == 4 %}
+                        ⭐⭐⭐⭐
+                    {% elif review.rating == 3 %}
+                        ⭐⭐⭐
+                    {% elif review.rating == 2 %}
+                        ⭐⭐
+                    {% else %}
+                        ⭐
+                    {% endif %}
+
+                </div>
+
+                <p>
+                    {{ review.text }}
+                </p>
+
+            </div>
+
+        {% empty %}
+
+            <p>
+                Пока отзывов нет.
+            </p>
+
+        {% endfor %}
+
+    </div>
+    </div>
+</section>
+
+
+<section class="review-form-section">
+
+    <h2>Оставить отзыв</h2>
+
+    {% if user.is_authenticated %}
+
+        <form method="post" class="review-form">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">
+                Отправить отзыв
+            </button>
+
+        </form>
+
+    {% else %}
+
+        <p class="login-warning">
+            Для оставления отзыва необходимо войти в аккаунт.
+        </p>
+
+    {% endif %}
+
+</section>
+
+    </div>
 </section>
 <script>
 
@@ -93,13 +170,26 @@ const tabs = document.querySelectorAll('.tab');
 const hall1 = document.querySelector('.hall-1');
 const hall2 = document.querySelector('.hall-2');
 
+function showHall(hallToShow, hallToHide) {
+
+    hallToHide.style.display = 'none';
+
+    hallToShow.style.display = 'flex';
+
+    hallToShow.style.animation = 'none';
+
+    setTimeout(() => {
+        hallToShow.style.animation = 'fadeIn 0.4s ease';
+    }, 10);
+
+}
+
 tabs[0].addEventListener('click', () => {
 
     tabs[0].classList.add('active');
     tabs[1].classList.remove('active');
 
-    hall1.style.display = 'flex';
-    hall2.style.display = 'none';
+    showHall(hall1, hall2);
 
 });
 
@@ -108,8 +198,7 @@ tabs[1].addEventListener('click', () => {
     tabs[1].classList.add('active');
     tabs[0].classList.remove('active');
 
-    hall1.style.display = 'none';
-    hall2.style.display = 'flex';
+    showHall(hall2, hall1);
 
 });
 

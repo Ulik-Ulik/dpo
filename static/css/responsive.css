@@ -54,4 +54,13 @@ height: 70px;
               .menu-item span {
               font-size: 20px;
               }
+                  .reviews-wrapper {
+        flex-direction: column;
+    }
+
+    .review-card {
+        max-width: 100%;
+    }
+
+}
 }
